@@ -117,7 +117,7 @@ func save() {
 		report := <-channel
 		file, err := os.OpenFile("honeylogs.txt", os.O_APPEND|os.O_WRONLY, 0644)
 		if err != nil {
-			fmt.Println("Error", err.Error())
+			fmt.Println("\nError whilst writing to file")
 			return
 		}
 		output := string(report)
